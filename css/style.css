@@ -1,6 +1,8 @@
 /* Setting Variables */
 :root {
     --theme-color: #538936;
+    --theme-light-color: #ffffff;
+    --theme-color-dark: #333;
 }
 
 /* Reset all(*) elements */
@@ -41,7 +43,7 @@ img {
     width: 100%;
 }   
 
-/* Generic classes */
+/* Generic utility classes */
 .flex {
     display: flex;
     flex-direction: row;
@@ -51,20 +53,25 @@ img {
 
 .grid {
     display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
+    grid-row: auto;
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1600px;
     padding: 0 40px;
     margin: 0 auto; /* Center the container */
     overflow: auto; /* Clear floats */
-
 }
 
 /* Navigation */
 .navbar {
     background-color: var(--theme-color);
-    color: #fff;
+    color: var(--theme-light-color);
     height: 70px;
 }
 
@@ -77,12 +84,74 @@ img {
 }
 
 .navbar a {
-    color: #fff;
+    color: var(--theme-light-color);
     padding: 10px;
     margin: 0 5px;
 }
 
 .navbar a:hover {
-    border-bottom: 2px #fff solid;
+    border-bottom: 2px var(--theme-light-color) solid;
 }
+
+/* Content Action/Hero Section */
+.cta {
+    background-color: var(--theme-color);
+    color: var(--theme-light-color);
+    height: 400px;
+    position: relative;
+}
+
+/* 
+    55% for the content
+    45% for the form
+    gap of 30px between the two (20px by default in .grid)
+*/
+.cta .grid {
+    overflow: visible;
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+}
+
+.cta h1 {
+    font-size: 2.2em;
+}
+
+.cta p {
+    font-size: 1em;
+    margin: 20px 0;
+}
+
+/* Form */
+.cta__form {
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100; /* To make sure it's on top of the background */
+}
+
+.cta__form .form__control {
+    margin: 20px 0;
+}
+
+.cta__form input[type="text"],
+.cta__form input[type="email"] {
+    
+}
+
+.cta__form input[type="submit"] {
+    
+}
+
+/* Card component */
+.card {
+    color: var(--theme-color-dark);
+    background-color: var(--theme-light-color);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* x, y, blur, spread, color */
+    padding: 20px;
+    margin: 10px;
+}
+
 
