@@ -7,11 +7,15 @@
     text-align: center;
 }
 
-
 .text-secondary {
     color: var(--theme-color-secondary);
   }
-  
+
+.lead {
+    /* set fontsize to 20px but in rem or em */
+    font-size: 1.25rem;
+}
+
 
 /* Flex */
 .flex {
