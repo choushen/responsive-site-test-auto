@@ -3,7 +3,9 @@
     --theme-color: #538936;
     --theme-light-color: #ffffff;
     --theme-color-dark: #333;
+    --highlighting-light: #b4b4b4;
 }
+
 
 /* Reset all(*) elements */
 * {
@@ -43,6 +45,7 @@ img {
     width: 100%;
 }   
 
+
 /* Generic utility classes */
 .flex {
     display: flex;
@@ -53,12 +56,19 @@ img {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
     grid-row: auto;
     grid-gap: 20px;
     justify-content: center;
     align-items: center;
     height: 100%;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .container {
@@ -67,6 +77,27 @@ img {
     margin: 0 auto; /* Center the container */
     overflow: auto; /* Clear floats */
 }
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    cursor: pointer;
+    background: var(--theme-color);
+    color: var(--theme-light-color);
+    border: none;
+    border-radius: 5px;
+
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--theme-light-color);
+}
+
+.btn:hover {
+    transform: scale(0.95);
+}
+
 
 /* Navigation */
 .navbar {
@@ -93,12 +124,29 @@ img {
     border-bottom: 2px var(--theme-light-color) solid;
 }
 
+
 /* Content Action/Hero Section */
 .cta {
     background-color: var(--theme-color);
     color: var(--theme-light-color);
     height: 400px;
     position: relative;
+}
+
+
+.cta::before,
+.cta::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0; 
+    left: 0;
+    background: var(--theme-light-color);
+    transform: skewY(-3deg);
+    transform: skewY(-3deg);
+    transform: skewY(-3deg);
+    transform: skewY(-3deg);
 }
 
 /* 
@@ -108,7 +156,7 @@ img {
 */
 .cta .grid {
     overflow: visible;
-    grid-template-columns: 55% 45%;
+    grid-template-columns: 55% auto;
     gap: 30px;
 }
 
@@ -120,6 +168,7 @@ img {
     font-size: 1em;
     margin: 20px 0;
 }
+
 
 /* Form */
 .cta__form {
@@ -137,12 +186,23 @@ img {
 
 .cta__form input[type="text"],
 .cta__form input[type="email"] {
-    
+    border: 0;
+    border-bottom: 1px solid var(--highlighting-light);
+    width: 100%; /* To make sure it takes the full width */
+    padding: 3px;
+    font-size: 1.15em;
 }
 
-.cta__form input[type="submit"] {
-    
+.cta__form input:focus {
+    outline: none;
 }
+
+
+/* Stats */
+.stats {
+    padding-top: 100px; /* Pushes the content down below the slant*/
+}
+
 
 /* Card component */
 .card {
