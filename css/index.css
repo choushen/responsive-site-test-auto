@@ -1,6 +1,8 @@
 /* Setting Variables */
 :root {
-    --theme-color: #538936;
+    --theme-color-primary: #538936 ;
+    --theme-color-secondary: #45722f;
+    --theme-color-tertiary: #233a17;
     --theme-light-color: #ffffff;
     --theme-color-dark: #333;
     --highlighting-light: #b4b4b4;
@@ -20,7 +22,7 @@ body {
     font-family: 'Roboto', sans-serif;
     color: #333333;
     line-height: 1.6;
-    overflow-x: hidden; /* Prevent horizontal scrollbar caused by cta background rotate() */
+    overflow-x: hidden;
 }
 
 pre {
@@ -50,9 +52,13 @@ img {
     width: 100%;
 }   
 
+strong {
+    font-weight: bold;
+}
+
 /* Navigation */
 .navbar {
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-primary);
     color: var(--theme-light-color);
     height: 70px;
 }
@@ -78,7 +84,7 @@ img {
 
 /* Content Action/Hero Section */
 .cta {
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-primary);
     color: var(--theme-light-color);
     height: 400px;
     position: relative;
@@ -90,7 +96,7 @@ img {
     position: absolute;
     width: 130%; /* Width should be more than 100% to cover the whole area when rotated */
     height: 150px; /* Height of the slanted area */
-    background-color: var(--theme-color);
+    background-color: var(--theme-color-primary);
     transform: rotate(-3deg); /* Adjust rotation angle to control the slant */
     bottom: -3%; /* Adjust this value to control where the slant starts */
     left: -15%; /* Adjust left position to ensure the element starts off-screen */
@@ -200,9 +206,166 @@ img {
 }
 
 
+/* Resources */
+.resources .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+
+/* Navigation */
+.navbar {
+    background-color: var(--theme-color-primary);
+    color: var(--theme-light-color);
+    height: 70px;
+}
+
+.navbar .flex {
+    justify-content: space-between;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    color: var(--theme-light-color);
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover {
+    border-bottom: 2px var(--theme-light-color) solid;
+}
+
+
+/* Content Action/Hero Section */
+.cta {
+    background-color: var(--theme-color-primary);
+    color: var(--theme-light-color);
+    height: 400px;
+    position: relative;
+}
+
+.cta::before,
+.cta::after {
+    content: '';
+    position: absolute;
+    width: 130%; /* Width should be more than 100% to cover the whole area when rotated */
+    height: 150px; /* Height of the slanted area */
+    background-color: var(--theme-color-primary);
+    transform: rotate(-3deg); /* Adjust rotation angle to control the slant */
+    bottom: -3%; /* Adjust this value to control where the slant starts */
+    left: -15%; /* Adjust left position to ensure the element starts off-screen */
+    z-index: -1; /* Place it behind the content */
+}
+
+/* 
+    55% for the content
+    45% for the form
+    gap of 30px between the two (20px by default in .grid)
+*/
+.cta .grid {
+    overflow: visible;
+    grid-template-columns: 55% auto;
+    gap: 30px;
+}
+
+.cta h1 {
+    font-size: 2.2em;
+}
+
+.cta p {
+    font-size: 1em;
+    margin: 20px 0;
+}
+
+
+/* Form */
+.cta__form {
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100; /* To make sure it's on top of the background */
+}
+
+.cta__form .form__control {
+    margin: 20px 0;
+}
+
+.cta__form input[type="text"],
+.cta__form input[type="email"] {
+    border: 0;
+    border-bottom: 1px solid var(--highlighting-light);
+    width: 100%; /* To make sure it takes the full width */
+    padding: 3px;
+    font-size: 1.15em;
+}
+
+.cta__form input:focus {
+    outline: none;
+}
+
+
+/* Card component */
+.card {
+    color: var(--theme-color-dark);
+    background-color: var(--theme-light-color);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* x, y, blur, spread, color */
+    padding: 20px;
+    margin: 10px;
+}
+
+
+/* Stats */
+.stats {
+    padding-top: 100px; /* Pushes the content down below the slant*/
+}
+
+.stats__heading {
+    max-width: 500px;
+    margin: auto;
+}
+
+.stats .grid h3 {
+    font-size: 1.5em;
+}
+
+.stats .grid p {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+
+/* Repo */
+.repo .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.repo .grid > *:first-child {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+
+.repo .grid > *:last-child {
+    grid-column: 3 / 4;
+    grid-row: 2 / 2;
+}
+
+.code__container {
+    position: relative;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
 
 /* Resources */
-
-
-
-/* Tools */
+.resources .grid {
+    grid-template-columns: repeat(4, 3fr);
+    grid-template-rows: repeat(2, 1fr);
+}
