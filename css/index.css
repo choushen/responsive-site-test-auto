@@ -45,60 +45,6 @@ img {
     width: 100%;
 }   
 
-
-/* Generic utility classes */
-.flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.grid {
-    display: grid;
-    grid-row: auto;
-    grid-gap: 20px;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.grid-2 {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.grid-3 {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.container {
-    max-width: 1600px;
-    padding: 0 40px;
-    margin: 0 auto; /* Center the container */
-    overflow: auto; /* Clear floats */
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 25px;
-    cursor: pointer;
-    background: var(--theme-color);
-    color: var(--theme-light-color);
-    border: none;
-    border-radius: 5px;
-
-}
-
-.btn-outline {
-    background-color: transparent;
-    border: 1px solid var(--theme-light-color);
-}
-
-.btn:hover {
-    transform: scale(0.95);
-}
-
-
 /* Navigation */
 .navbar {
     background-color: var(--theme-color);
