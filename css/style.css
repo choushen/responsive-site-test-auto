@@ -133,20 +133,17 @@ img {
     position: relative;
 }
 
-
 .cta::before,
 .cta::after {
     content: '';
     position: absolute;
-    height: 100px;
-    bottom: -70px;
-    right: 0; 
-    left: 0;
-    background: var(--theme-light-color);
-    transform: skewY(-3deg);
-    transform: skewY(-3deg);
-    transform: skewY(-3deg);
-    transform: skewY(-3deg);
+    width: 130%; /* Width should be more than 100% to cover the whole area when rotated */
+    height: 150px; /* Height of the slanted area */
+    background-color: var(--theme-color);
+    transform: rotate(-3deg); /* Adjust rotation angle to control the slant */
+    bottom: -20px; /* Adjust this value to control where the slant starts */
+    left: -15%; /* Adjust left position to ensure the element starts off-screen */
+    z-index: -1; /* Place it behind the content */
 }
 
 /* 
