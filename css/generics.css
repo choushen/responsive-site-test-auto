@@ -2,6 +2,11 @@
     Generic utility classes 
 */
 
+/* Text Align */
+.text-center {
+    text-align: center;
+}
+
 /* Flex */
 .flex {
     display: flex;
@@ -13,11 +18,15 @@
 /* Grid */
 .grid {
     display: grid;
-    grid-row: auto;
+    /* grid-row: auto; */
     grid-gap: 20px;
     justify-content: center;
     align-items: center;
     height: 100%;
+}
+
+.grid-1 {
+    grid-template-columns: repeat(1, 1fr);
 }
 
 .grid-2 {
@@ -28,6 +37,17 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-5 {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-6 {
+    grid-template-columns: repeat(6, 1fr);
+}
 
 /* Margin Top and Bottom */
 .my-1 {
