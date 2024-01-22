@@ -2,10 +2,16 @@
     Generic utility classes 
 */
 
-/* Text Align */
+/* Text */
 .text-center {
     text-align: center;
 }
+
+
+.text-secondary {
+    color: var(--theme-color-secondary);
+  }
+  
 
 /* Flex */
 .flex {
@@ -170,11 +176,32 @@
     color: var(--theme-light-color);
 }
 
+.btn-secondary {
+    background-color: var(--theme-color-secondary);
+    color: var(--theme-light-color);
+}
+
+
+.btn-light {
+    background-color: var(--theme-light-color);
+    color: var(--theme-color-dark);
+}
+
+.btn-dark {
+    background-color: var(--theme-color-other);
+    color: var(--theme-light-color);
+}
 
 /* Backgrounds */
 .bg-primary {
     background-color: var(--theme-color-primary);
     color: var(--theme-light-color);
 }
+
+.bg-secondary {
+    background-color: var(--theme-color-secondary);
+    color: var(--theme-light-color);
+}
+
 
 
