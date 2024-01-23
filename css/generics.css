@@ -32,6 +32,10 @@
     font-weight: bold;
 }
 
+.fw-bolder {
+    font-weight: bolder;
+}
+
 .fw-light {
     font-weight: lighter;
 }
