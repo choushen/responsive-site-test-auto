@@ -28,6 +28,19 @@
     font-size: 2em;
 }
 
+.fw-bold {
+    font-weight: bold;
+}
+
+.fw-light {
+    font-weight: lighter;
+}
+
+.fw-regular {
+    font-weight: normal;
+}
+
+
 /* Flex */
 .flex {
     display: flex;

@@ -376,9 +376,12 @@ strong {
     transition: transform 0.3s ease-in-out;
 }
 
+
+
 .tools .card h4 {
-    font-size: 1.15rem;
+    font-size: 1.15em;
     margin-bottom: 10px;
+    font-weight: normal;
 }
 
 .tools .card:hover {
