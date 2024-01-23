@@ -13,9 +13,20 @@
 
 .lead {
     /* set fontsize to 20px but in rem or em */
-    font-size: 1.25rem;
+    font-size: 1.25em;
 }
 
+.sm {
+    font-size: 0.8em;
+}
+
+.md {
+    font-size: 1.5em;
+}
+
+.lg {
+    font-size: 2em;
+}
 
 /* Flex */
 .flex {
@@ -23,6 +34,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 /* Grid */
@@ -207,5 +219,13 @@
     color: var(--theme-light-color);
 }
 
-
+/* Card */
+.card {
+    color: var(--theme-color-dark);
+    background-color: var(--theme-light-color);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+}
 

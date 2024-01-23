@@ -308,18 +308,6 @@ strong {
     outline: none;
 }
 
-
-/* Card component */
-.card {
-    color: var(--theme-color-dark);
-    background-color: var(--theme-light-color);
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* x, y, blur, spread, color */
-    padding: 20px;
-    margin: 10px;
-}
-
-
 /* Stats */
 .stats {
     padding-top: 100px; /* Pushes the content down below the slant*/
@@ -382,3 +370,28 @@ strong {
 }
 
 
+/* Tools */
+.tools .card {
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.tools .card h4 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+
+.tools .card:hover {
+    transform:translateY(-10px);
+}
+
+.tools .card img {
+    width: 100px; /* Set a fixed width */
+    height: 100px; /* Set a fixed height */
+    object-fit: contain; /* This will ensure the image is scaled correctly within the fixed dimensions */
+}
+
+.tools .flex {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
