@@ -203,7 +203,10 @@ strong {
     border: 1px solid #ddd;
     background-color: #f9f9f9;
     padding: 10px;
+    overflow-x: auto;
 }
+
+
 
 
 /* Resources */
@@ -376,8 +379,6 @@ strong {
     transition: transform 0.3s ease-in-out;
 }
 
-
-
 .tools .card h4 {
     font-size: 1.15em;
     margin-bottom: 10px;
@@ -397,4 +398,13 @@ strong {
 .tools .flex {
     flex-wrap: wrap;
     justify-content: space-evenly;
+}
+
+
+/* Footer */
+.footer .social a {
+    margin: 0 5px;
+}
+.footer {
+    margin-top: 70px;
 }
