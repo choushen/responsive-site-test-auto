@@ -176,9 +176,9 @@
 /* Container */
 .container {
     max-width: 1600px;
-    padding: 0 40px;
+    padding: 0 40px; /**/
     margin: 0 auto; /* Center the container */
-    overflow: auto; /* Clear floats */
+    /* overflow: auto; Clear floats */
 }
 
 
@@ -216,7 +216,7 @@
 
 
 .btn-light {
-    background-color: var(--theme-light-color);
+    background-color: var(--theme-section-light);
     color: var(--theme-color-dark);
 }
 
@@ -241,6 +241,10 @@
     color: var(--theme-light-color);
 }
 
+.bg-light {
+    background-color: var(--theme-section-light);
+    color: var(--theme-color-dark);
+}
 
 .btn-primary a,
 .btn-secondary a,
@@ -261,4 +265,14 @@
     padding: 20px;
     margin: 10px;
 }
+
+
+/* Footer */
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+
 
