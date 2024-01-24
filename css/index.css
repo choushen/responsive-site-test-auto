@@ -81,6 +81,13 @@ strong {
     border-bottom: 2px var(--theme-light-color) solid;
 }
 
+.navbar h1 {
+    font-size:2.5em;
+}
+
+.navbar .container {
+    overflow-y: hidden;
+}
 
 /* Content Action/Hero Section */
 .cta {

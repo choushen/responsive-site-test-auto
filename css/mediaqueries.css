@@ -1,19 +1,22 @@
-/*   Tablet Screen Size <= Devices */
-@media screen and (max-width: 768px) {
-    .grid,
-    .cta .grid,
-    .repo .grid,
-    .resources .grid,
-    .tools .grid {
+@media screen and (max-width: 988px) {
+
+    .navbar {
+        height: auto;
+    }
+
+    .navbar .flex {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    .cta .grid {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
     }
-
-    .stats .grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-    }
-
+    
     /* Adjust the cta to fit all items so the form doesn't cover the text */
     .cta {
         height: auto; /* 100% */
@@ -28,6 +31,37 @@
         justify-self: center;
     }
 
+}
+
+/*   Tablet Screen Size <= Devices */
+@media screen and (max-width: 768px) {
+    .grid,
+    .cta .grid,
+    .repo .grid,
+    .resources .grid,
+    .tools .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .navbar {
+        height: auto;
+    }
+
+    .navbar .flex {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .stats .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    
     .repo .grid {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(3, 1fr);
