@@ -5,7 +5,8 @@
     --theme-color-other: #233a17;
     --theme-light-color: #ffffff;
     --theme-color-dark: #333;
-    --highlighting-light: #b4b4b4;
+    --theme-section-light: #e5e5e5;
+    --highlighting-light: #e5e5e5;
 }
 
 
@@ -81,6 +82,13 @@ strong {
     border-bottom: 2px var(--theme-light-color) solid;
 }
 
+.navbar h1 {
+    font-size:2.5em;
+}
+
+.navbar .container {
+    overflow-y: hidden;
+}
 
 /* Content Action/Hero Section */
 .cta {
@@ -374,6 +382,9 @@ strong {
 
 
 /* Tools */
+.tools .container {
+    padding-bottom: 70px;
+}
 .tools .card {
     text-align: center;
     transition: transform 0.3s ease-in-out;
@@ -404,7 +415,4 @@ strong {
 /* Footer */
 .footer .social a {
     margin: 0 5px;
-}
-.footer {
-    margin-top: 70px;
 }

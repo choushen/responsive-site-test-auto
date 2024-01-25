@@ -1,17 +1,8 @@
-/*   Tablet Screen Size <= Devices */
-@media screen and (max-width: 768px) {
-    .grid,
-    .cta .grid,
-    .repo .grid,
-    .resources .grid,
-    .tools .grid {
+@media screen and (max-width: 988px) {
+    
+    .cta .grid {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
-    }
-
-    .stats .grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
     }
 
     /* Adjust the cta to fit all items so the form doesn't cover the text */
@@ -28,6 +19,64 @@
         justify-self: center;
     }
 
+    .resources .grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 column */
+        grid-template-rows: repeat(2, 1fr); /* 2 equal rows */
+    }
+    
+    .resources .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .resources .grid > *:nth-child(1) {
+        grid-column: 1/1;
+        grid-row: 1/2;
+    }
+
+    .resources .grid img {
+        display: none;
+    }
+    
+}
+
+/*   Tablet Screen Size <= Devices */
+@media screen and (max-width: 768px) {
+    
+    .footer .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+    }
+
+    .grid,
+    .cta .grid,
+    .repo .grid,
+    .resources .grid,
+    .tools .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .navbar {
+        height: auto;
+    }
+
+    .navbar .flex {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .stats .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    
     .repo .grid {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(3, 1fr);
@@ -48,35 +97,10 @@
         grid-row: 3/4;
     }
 
-    .resources .textcenter {
-        margin-bottom: 30px;
-    }
-
-    .resources .grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
-    }
-
-    .resources .grid > *:nth-child(1) {
-        grid-column: 1/1;
-        grid-row: 1/2;
-    }
-
-    .resources .grid > *:nth-child(2) {
-        grid-column: 1/1;
-        grid-row: 2/3;
-    }
-
-    .resources img {
-        width: 100%; /* This will make the image responsive and scale with the width of its container */
-        height: auto; /* This will maintain the aspect ratio of the image */
-        max-width: 768px;
-    }
-
 }
 
 /* Mobile Screen Size <= Devices */
-@media screen and (max-width: 560px){
+@media screen and (max-width: 590px){
     .navbar {
         height: auto;
     }

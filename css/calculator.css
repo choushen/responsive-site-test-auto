@@ -1,0 +1,38 @@
+/* Container */
+.calculator .flex {
+    display: flex;
+    flex-direction: column; /* Not needed for 'grid' */
+    justify-content: center; /* Vertical alignment for 'flex' */
+    align-items: center; /* Horizontal alignment to the start for 'flex' */
+    height: 100%; /* Or set a specific height */
+}
+
+
+/* Form */
+.calculator__form {
+    position: relative;
+    top: 30px;
+    bottom: 30px;
+    height: 350px;
+    width: 400px;
+    padding: 40px; /* To make sure it's on top of the background */
+}
+
+.calculator__form .form__control {
+    margin: 20px 0;
+}
+
+.calculator__form input[type="text"],
+.calculator__form input[type="email"] {
+    border: 0;
+    border-bottom: 1px solid var(--highlighting-light);
+    width: 100%; /* To make sure it takes the full width */
+    padding: 3px;
+    font-size: 1.15em;
+}
+
+.calculator__form input:focus {
+    outline: none;
+}
+
+
