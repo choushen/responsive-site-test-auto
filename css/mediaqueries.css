@@ -1,5 +1,17 @@
 @media screen and (max-width: 988px) {
     
+    .features__main .grid {
+        /* Your override styles for smaller screens here */
+        grid-template-columns: 1fr; /* One column */
+        grid-template-rows: auto; /* Automatic row height */
+    }
+
+    .features__main .grid > .card {
+        /* Adjustments for each card on smaller screens */
+        grid-column: 1;
+        grid-row: auto;
+    }
+
     .cta .grid {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
@@ -42,13 +54,24 @@
 
 /*   Tablet Screen Size <= Devices */
 @media screen and (max-width: 768px) {
-    
+
     .footer .grid {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
         align-items: center;
         justify-content: center;
     }
+
+    .features__header img,
+    .features__sub__header img {
+        justify-self: center;
+    }
+    
+    .features__header,
+    .features__sub__header {
+        text-align: center;
+    }
+
 
     .grid,
     .cta .grid,
