@@ -178,7 +178,7 @@
     max-width: 1600px;
     padding: 0 40px; /**/
     margin: 0 auto; /* Center the container */
-    overflow: auto; /* Clear floats */
+    /* overflow: auto; Clear floats */
 }
 
 
