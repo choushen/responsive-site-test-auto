@@ -7,7 +7,8 @@
 /* Sub Header */
 .features__sub__header img {
     width: 300px;
-    justify-self: end;
+    justify-self: start;
+    color: var(--theme-color-primary);
 }
 
 
